@@ -1,0 +1,28 @@
+# Inserts a blank line between shell prompts
+add_newline = true
+
+
+# Replace the "❯" symbol in the prompt with "🚀"
+[character]
+success_symbol = "🚀"
+error_symbol = "😟"
+vicmd_symbol = "👻"
+
+
+[battery]
+full_symbol = "🔋 "
+charging_symbol = "⚡️ "
+discharging_symbol = "💀 "
+
+
+[conda]
+format = "[$symbol$environment](dimmed green) "
+
+
+[rust]
+format = "via [⚙️ $version](red bold)"
+
+
+[sudo]
+disabled = false
+
