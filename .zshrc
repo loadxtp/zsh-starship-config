@@ -41,17 +41,9 @@ alias unproxy='
 
 # system path
 export PATH=$HOME/.local/bin:$PATH
-export LD_LIBRARY_PATH=$HOME/.local/lib:$LD_LIBRARY_PATH
 
 # rust
 source "$HOME/.cargo/env"
-
-# ros
-#source /opt/ros/melodic/setup.zsh
-source /opt/trunk_master/setup.zsh
-
-# apollo
-export APOLLO_ROOT_DIR=/home/xtp/code/github/apollo
 
 # fzf
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
