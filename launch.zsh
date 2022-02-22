@@ -1,16 +1,18 @@
 # ~/.zshrc
 #
 
+spaceport=$(dirname $0)
+
 # zsh plugins
-source $HOME/.zsh/aliases.zsh
-source $HOME/.zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
-source $HOME/.zsh/plugins/fast-syntax-highlighting/fast-syntax-highlighting.plugin.zsh
-source $HOME/.zsh/plugins/completion.zsh
-source $HOME/.zsh/plugins/history.zsh
-source $HOME/.zsh/plugins/key-bindings.zsh
-source $HOME/.zsh/plugins/extract.plugin.zsh
-source $HOME/.zsh/plugins/sudo.plugin.zsh
-source $HOME/.zsh/plugins/_ag
+source ${spaceport}/zsh/aliases.zsh
+source ${spaceport}/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
+source ${spaceport}/zsh/plugins/fast-syntax-highlighting/fast-syntax-highlighting.plugin.zsh
+source ${spaceport}/zsh/plugins/completion.zsh
+source ${spaceport}/zsh/plugins/history.zsh
+source ${spaceport}/zsh/plugins/key-bindings.zsh
+source ${spaceport}/zsh/plugins/extract.plugin.zsh
+source ${spaceport}/zsh/plugins/sudo.plugin.zsh
+source ${spaceport}/zsh/plugins/_ag
 
 # Initialize the completion system
 autoload -Uz compinit
@@ -54,5 +56,6 @@ source "$HOME/.cargo/env"
 
 ######### Add config before here #########
 #
-# startship
+# starship
+export STARSHIP_CONFIG=${spaceport}/starship/starship.toml
 eval "$(starship init zsh)"
