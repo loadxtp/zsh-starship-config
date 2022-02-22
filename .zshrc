@@ -2,11 +2,15 @@
 #
 
 # zsh plugins
-source $HOME/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
-source $HOME/.zsh/fast-syntax-highlighting/fast-syntax-highlighting.plugin.zsh
-source $HOME/.zsh/completion.zsh
-source $HOME/.zsh/history.zsh
-source $HOME/.zsh/key-bindings.zsh
+source $HOME/.zsh/aliases.zsh
+source $HOME/.zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
+source $HOME/.zsh/plugins/fast-syntax-highlighting/fast-syntax-highlighting.plugin.zsh
+source $HOME/.zsh/plugins/completion.zsh
+source $HOME/.zsh/plugins/history.zsh
+source $HOME/.zsh/plugins/key-bindings.zsh
+source $HOME/.zsh/plugins/extract.plugin.zsh
+source $HOME/.zsh/plugins/sudo.plugin.zsh
+source $HOME/.zsh/plugins/_ag
 
 # Initialize the completion system
 autoload -Uz compinit
@@ -23,7 +27,7 @@ fi
 zmodload -i zsh/complist
 
 # alias
-source $HOME/.zsh/aliases.zsh
+alias vim='nvim'
 
 # alias for proxy
 export hostip=$(ip route | grep default | awk '{print $3}')

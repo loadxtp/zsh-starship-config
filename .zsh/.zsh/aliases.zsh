@@ -1,7 +1,6 @@
-alias l='ls -lh'
-alias ls='ls -G --color=always'
-alias ll='ls -l'
-alias la='ls -la'
+alias ls='ls -G --color=always'               # colorize `ls` output
+alias ll='ls -l'                              # colorize `ls` output
+alias la='ls -la'                             # colorize `ls` output
 alias zshreload='source ~/.zshrc'             # reload ZSH
 alias shtop='sudo htop'                       # run `htop` with root rights
 alias grep='grep --color=auto'                # colorize `grep` output
