@@ -33,7 +33,7 @@ alias vim='nvim'
 
 # alias for proxy
 export hostip=$(ip route | grep default | awk '{print $3}')
-export hostport=10809
+export hostport=10811
 alias proxy='
     export HTTPS_PROXY="http://${hostip}:${hostport}";
     export HTTP_PROXY="http://${hostip}:${hostport}";
