@@ -28,12 +28,9 @@ fi
 # Enhanced form of menu completion called `menu selection'
 zmodload -i zsh/complist
 
-# alias
-alias vim='nvim'
-
 # alias for proxy
-export hostip=$(ip route | grep default | awk '{print $3}')
-export hostport=10811
+export hostip=0.0.0.0
+export hostport=20171
 alias proxy='
     export HTTPS_PROXY="http://${hostip}:${hostport}";
     export HTTP_PROXY="http://${hostip}:${hostport}";
@@ -47,12 +44,6 @@ alias unproxy='
 
 # system path
 export PATH=$HOME/.local/bin:$PATH
-
-# rust
-source "$HOME/.cargo/env"
-
-# fzf
-[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
 ######### Add config before here #########
 #
